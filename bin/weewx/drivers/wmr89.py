@@ -284,7 +284,7 @@ class WMR89(weewx.drivers.AbstractDevice):
 
     def log_packet(self, packet):
         #packet_str = ','.join(["x%x" % v for v in packet])
-        print "%d, %s, %s" % (int(time.time() + 0.5), time.asctime(), packet.encode('hex'))
+        print ("%d, %s, %s" % (int(time.time() + 0.5), time.asctime(), packet.encode('hex')))
 
     def _wmr89_wind_packet(self, packet):
         """Decode a wind packet. Wind speed will be in kph"""
